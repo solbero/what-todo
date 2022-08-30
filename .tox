@@ -1,0 +1,22 @@
+[tox]
+envlist = py310, lint
+skip_missing_interpreters = true
+isolated_build = true
+
+[gh-actions]
+python =
+    3.10: py310, lint
+
+[testenv]
+description = run the tests with pytest
+deps = pytest
+commands = pytest {posargs}
+
+[testenv:lint]
+description = lint files with pre-commit
+deps = pre-commit
+commands = pre-commit run --all-files
+
+[flake8]
+max-line-length = 120
+ignore = E203

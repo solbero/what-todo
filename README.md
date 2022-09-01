@@ -42,8 +42,9 @@ You need to create a `.env` file in the root directory to hold some environment 
 ```
 FLASK_ENV="development"
 FLASK_APP="main.py"
-SECRET_KEY="<generated-secret-key>"
+FLASK_SECRET_KEY="<generated-secret-key>"
 ```
+4. Replace `<generated-secret-key>` with a secret key you generate yourself. Can get some good instructions on how to generate a secret key in [this StackOverflow answer](https://stackoverflow.com/a/54433731).
 
 ## Running
 You need to run the app through Poetry and its virtual environment:

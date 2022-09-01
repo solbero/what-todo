@@ -6,7 +6,7 @@ class Config:
     DEBUG = False
     TESTING = False
     SESSION_COOKIE_SECURE = True
-    SECRET_KEY = os.environ.get("SECRET_KEY")
+    SECRET_KEY = os.environ.get("FLASK_SECRET_KEY")
     if not SECRET_KEY:
         raise ValueError("No SECRET_KEY set for Flask application")
 

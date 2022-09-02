@@ -1,0 +1,122 @@
+html,
+body {
+  color: white;
+  box-sizing: border-box;
+  background-color: #587291;
+  height: 100%;
+  font-family: sans-serif;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    height: 100%;
+    display: grid;
+    grid-template-columns: [main-start] 5fr [aside-start] 2fr [aside-end main-end];
+    grid-template-rows: [main-start] 80px [aside-start] auto [aside-end] 40px [main-end];
+  }
+}
+
+header,
+aside,
+footer {
+  display: flex;
+}
+
+header,
+footer {
+  position: sticky;
+  background-image: linear-gradient(to right, #b68602, #dea402);
+}
+
+header {
+  grid-column: main;
+  justify-content: space-between;
+}
+
+header > #main-logo {
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  header > #main-logo {
+    height: 30px;
+    display: flex;
+    align-self: center;
+    padding: 10px;
+    margin-left: 10px;
+  }
+}
+
+header > form {
+  display: none;
+}
+
+@media only screen and (min-width: 800px) {
+  header > form,
+  header > nav {
+    display: flex;
+  }
+}
+header > form {
+  width: 60%;
+  justify-content: end;
+  align-items: center;
+}
+@media only screen and (min-width: 1024px) {
+  header > form > input {
+    margin-right: 2%;
+    height: 30px;
+    font-size: 17px;
+  }
+}
+header > form > input {
+  color: white;
+}
+
+main {
+  background-color: #2c262c;
+}
+main > h1 {
+  text-align: center;
+  width: 100%;
+}
+main > p {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+aside {
+  grid-column: aside;
+  background-color: #4c424c;
+  font-family: sans-serif;
+  color: white;
+}
+
+footer {
+  grid-column: main;
+  justify-content: center;
+  padding: 10px;
+}
+
+.transparent {
+  background-color: hsla(0, 60%, 0%, 0.4);
+}
+.transparent-w {
+  background-color: rgba(255, 255, 255, 0.103);
+}
+.no-border {
+  border: none;
+}
+.justify-end {
+  justify-content: end;
+}
+.p10 {
+  padding: 10px;
+}
+.p5-10 {
+  padding: 5px 10px;
+}
+.h30 {
+  height: 30px;
+}

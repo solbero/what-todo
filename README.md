@@ -14,7 +14,7 @@ Install Poetry on your machine. The documentation for Poetry can be found [here]
 
 #### macOS, Linux and Windows Subsystem for Linux
 ```sh
-curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+curl -sSL https://install.python-poetry.org | python3 -
 ```
 
 #### Windows
